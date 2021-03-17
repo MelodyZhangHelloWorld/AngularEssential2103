@@ -45,7 +45,8 @@ new Course('Vue.js',
   //*-------------------------------------------------
   
   private _selectedRow: number;
-  public searchText: string;
+  
+  public searchResult: string;
   
   get selectedRow(): number{
     return this._selectedRow
@@ -61,6 +62,10 @@ new Course('Vue.js',
 
   getCourses() {
     return this.courses;
+
+  }
+  getCourse(id:number){
+    return this.courses[id];
 
   }
 

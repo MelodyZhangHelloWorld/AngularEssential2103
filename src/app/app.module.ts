@@ -9,6 +9,11 @@ import { CourseDetailComponent } from './courses/course-detail/course-detail.com
 import { CourseListComponent } from './courses/course-list/course-list.component';
 import { CourseStartComponent } from './courses/course-start/course-start.component';
 import { CourseItemComponent } from './courses/course-list/course-item/course-item.component';
+import { TruncatePipe } from './truncate.pipe';
+import { FilterPipe } from './filter.pipe';
+
+import{ FormsModule } from '@angular/forms';
+import { OrderByPipe } from './order-by.pipe';
 
 @NgModule({
   declarations: [
@@ -18,11 +23,15 @@ import { CourseItemComponent } from './courses/course-list/course-item/course-it
     CourseDetailComponent,
     CourseListComponent,
     CourseStartComponent,
-    CourseItemComponent
+    CourseItemComponent,
+    TruncatePipe,
+    FilterPipe,
+    OrderByPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

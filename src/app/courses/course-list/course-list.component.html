@@ -1,12 +1,15 @@
+<input type="text" [(ngModel)]="searchResult">
+
+
 <br>
 <hr>
 <div class="row">
     <div class="col-xs-12">
         <app-course-item 
-        *ngFor="let courseE1 of courses; let i = index"
+        *ngFor="let courseEl of courses | orderBy: 'name' | filter:searchResult  ; let i = index"
         (mouseover)="setHoveredRow(i)"
         (mouseleave)="setHoveredRow(unknown)"
         [class.active]="i == selectedRow"
-        [course] = "courseE1" > </app-course-item>
+        [course] = "courseEl" > </app-course-item>
     </div>
 </div>
