@@ -7,12 +7,10 @@ import { Course } from '../course.model';
   styleUrls: ['./course-detail.component.css']
 })
 export class CourseDetailComponent implements OnInit {
-
-  course: Course;
-
+course: Course;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
